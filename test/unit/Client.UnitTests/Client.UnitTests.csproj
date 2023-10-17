@@ -38,6 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Client\Client.csproj" />
+    <ProjectReference Include="..\..\..\src\Client\Sentinel.Carweb.ZeebeClient.csproj" />
   </ItemGroup>
 </Project>
