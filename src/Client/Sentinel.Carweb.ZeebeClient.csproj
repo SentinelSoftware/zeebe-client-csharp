@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
-    <Version>2.3.0</Version>
     <Authors>Christopher Zell</Authors>
     <Company />
     <Description>
@@ -13,8 +12,6 @@ For more information about the zeebe project please visit http://zeebe.io</Descr
     <PackageProjectUrl>https://github.com/zeebe-io/zeebe-client-csharp</PackageProjectUrl>
     <PackageTags>zeebe, zb, zb-csharp, zb-client, grpc</PackageTags>
 
-    <AssemblyVersion>2.3.0</AssemblyVersion>
-    <FileVersion>2.3.0</FileVersion>
     <PackageReleaseNotes>
 Features:
 
@@ -29,7 +26,6 @@ This release is based on the Zeebe 8.3.0 release (https://github.com/zeebe-io/ze
     </PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Sentinel.Carweb.ZeebeClient</PackageId>
     <Product>Zeebe C# client</Product>
     <RepositoryUrl>https://github.com/zeebe-io/zeebe-client-csharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
