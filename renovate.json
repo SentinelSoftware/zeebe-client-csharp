@@ -1,0 +1,6 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>SentinelSoftware/renovate-config:default-net8.json"
+  ]
+}

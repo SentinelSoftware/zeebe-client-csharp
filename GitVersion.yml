@@ -1,0 +1,30 @@
+mode: mainline
+branches:
+  main:
+    regex: main
+    prevent-increment-of-merged-branch-version: true
+    is-release-branch: true
+  feature:
+    regex: '[Ff]eat(ure)?[/-]'
+    increment: patch
+    mode: ContinuousDeployment
+    tag: beta
+    prevent-increment-of-merged-branch-version: false
+    track-merge-target: false
+    source-branches: ['main']
+  hotfix:
+    regex: '[Hh]otfix[/-]'
+    increment: patch
+    is-release-branch: true
+  bugfix:
+    regex: '([Bb]ugfix)|(^[Ff]ix)[/-]'
+    increment: patch
+    tag: alpha
+    source-branches: ['main','feature']
+  chore:
+    regex: '([Cc]hore)[/-]'
+    increment: none
+    source-branches: ['main','feature']
+    tag: beta
+ignore:
+  sha: []

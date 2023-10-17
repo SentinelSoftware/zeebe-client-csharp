@@ -1,50 +1,111 @@
-# Autosave files
-*~
-API_KEY
-target/
-# proto/
-
-# build
-[Oo]bj/
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.obj
 [Bb]in/
+[Oo]bj/
 packages/
-TestResults/
-
-# globs
-Makefile.in
-*.DS_Store
-*.sln.cache
+tools/
+dist/
 *.suo
-*.cache
-*.pidb
-*.userprefs
-*.usertasks
-config.log
-config.make
-config.status
-aclocal.m4
-install-sh
-autom4te.cache/
 *.user
-*.tar.gz
-tarballs/
-test-results/
-Thumbs.db
+_ReSharper.*
+.dist/
+.pack/
 
-# Mac bundle stuff
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
 *.dmg
-*.app
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 
-# resharper
-*_Resharper.*
-*.Resharper
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
 
-# idea
-.idea
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+build_artifacts/
+*.dylib
 
-# vs
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+*.wixobj
+*.wixpdb
+*.msi
+.builds
+
+# Visual Studio profiler
 .vs/
-# # dotCover
-*.dotCover
+*.psess
+*.vsp
+*.vspx
 
-credentials/
+# ReSharper is a .NET coding add-in
+_ReSharper*
+*.sln.DotSettings
+
+# ReSharper is a .NET coding add-in
+_ReSharper*
+*.sln.DotSettings
+
+# Cake
+tools/
+
+# NuGet
+*.nupkg
+**/packages/*
+
+# Wix ToolSet
+*.wixobj
+.vs/
+
+# NCrunch
+*ncrunch*
+
+# DotCover
+*dotCover*
+
+# Test runs
+.test-results/
