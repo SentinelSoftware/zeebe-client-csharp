@@ -32,6 +32,13 @@ This release is based on the Zeebe 8.3.0 release (https://github.com/zeebe-io/ze
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RootNamespace>Zeebe.Client</RootNamespace>
     <LangVersion>default</LangVersion>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
   </PropertyGroup>
 
   <ItemGroup>
