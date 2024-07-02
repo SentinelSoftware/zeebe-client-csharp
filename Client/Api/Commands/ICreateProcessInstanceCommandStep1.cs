@@ -20,7 +20,6 @@ namespace Zeebe.Client.Api.Commands
         /// <param name="processDefinitionKey">the key of the process</param>
         /// <returns>the builder for this command</returns>
         ICreateProcessInstanceCommandStep3 ProcessDefinitionKey(long processDefinitionKey);
-        ICreateProcessInstanceCommandStep3 AddStartInstruction(string elementId);
     }
 
     public interface ICreateProcessInstanceCommandStep2
@@ -53,6 +52,7 @@ namespace Zeebe.Client.Api.Commands
         /// <returns>the builder for this command. Call <see cref="IFinalCommandWithRetryStep{T}.Send"/> to complete the command and send
         ///     it to the broker.</returns>
         ICreateProcessInstanceCommandStep3 Variables(string variables);
+        ICreateProcessInstanceCommandStep3 AddStartInstruction(string elementId);
 
         /// <summary>
         /// When this method is called, the response to the command will be received after the process
