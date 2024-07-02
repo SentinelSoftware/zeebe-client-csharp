@@ -20,6 +20,7 @@ namespace Zeebe.Client.Api.Commands
         /// <param name="processDefinitionKey">the key of the process</param>
         /// <returns>the builder for this command</returns>
         ICreateProcessInstanceCommandStep3 ProcessDefinitionKey(long processDefinitionKey);
+        ICreateProcessInstanceCommandStep3 AddStartInstruction(string elementId);
     }
 
     public interface ICreateProcessInstanceCommandStep2
