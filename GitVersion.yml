@@ -1,30 +1,31 @@
-mode: mainline
+workflow: TrunkBased/preview1
+mode: ContinuousDeployment
+semantic-version-format: Loose
 branches:
-  main:
-    regex: main
-    prevent-increment-of-merged-branch-version: true
-    is-release-branch: true
   feature:
-    regex: '[Ff]eat(ure)?[/-]'
-    increment: patch
-    mode: ContinuousDeployment
-    tag: beta
-    prevent-increment-of-merged-branch-version: false
-    track-merge-target: false
-    source-branches: ['main']
-  hotfix:
-    regex: '[Hh]otfix[/-]'
-    increment: patch
-    is-release-branch: true
+    regex: '[Ff]eat(ure)?|([Pp]bi|[Uu]s(erstory)?|[Cc]u)[/-](?<BranchName>.+)'
+    label: pbi
   bugfix:
-    regex: '([Bb]ugfix)|(^[Ff]ix)[/-]'
-    increment: patch
-    tag: alpha
-    source-branches: ['main','feature']
+    mode: ContinuousDelivery
+    label: bug
+    increment: Patch
+    prevent-increment:
+      when-current-commit-tagged: false
+    track-merge-message: true
+    regex: ((^[Bb]ug(fix)?)|(^[Ff]ix))[/-](?<BranchName>.+)
+    source-branches:
+    - main
+    is-source-branch-for: []
+    is-main-branch: false
+    pre-release-weight: 30000  
   chore:
-    regex: '([Cc]hore)[/-]'
-    increment: none
-    source-branches: ['main','feature']
-    tag: beta
-ignore:
-  sha: []
+    mode: ContinuousDelivery
+    increment: Patch
+    label: chore
+    prevent-increment:
+      when-current-commit-tagged: false
+    regex: ((^[Cc]hore)|(^[Rr]enovate))[/-](?<BranchName>.+)
+    source-branches:
+    - main
+    is-source-branch-for: []
+    pre-release-weight: 30000

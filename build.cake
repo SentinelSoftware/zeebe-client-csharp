@@ -4,7 +4,7 @@
 #addin nuget:?package=Cake.Incubator&version=8.0.0
 
 // tools - dotnet
-#tool dotnet:?package=GitVersion.Tool&version=5.12.0
+#tool dotnet:?package=GitVersion.Tool&version=6.4.0
 #tool dotnet:?package=dotnet-reportgenerator-globaltool&version=5.1.26
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -94,8 +94,8 @@ Task("Version")
 			OutputType = GitVersionOutput.Json,
 			Verbosity = GitVersionVerbosity.Verbose
 		});
-		currentVersion = $"{gitVersion.SemVer}.{buildCounter}";
-		currentVersionNuGet = $"{gitVersion.NuGetVersion}.{buildCounter}";
+		currentVersion = gitVersion.SemVer;
+		currentVersionNuGet = currentVersion;
 		preReleaseTag = gitVersion.PreReleaseTag;
 
 		Information($"Current version: {currentVersion}");
